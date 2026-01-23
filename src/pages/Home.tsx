@@ -10,7 +10,8 @@ const MOCK_PRODUCTS: Product[] = [
         price: '450.00',
         skins: 156,
         agents: 22,
-        description: 'Top 500 Radiant Account. Loaded with skins.'
+        description: 'Top 500 Radiant Account. Loaded with skins.',
+        category: 'skin-garantida'
     },
     {
         id: '2',
@@ -19,7 +20,8 @@ const MOCK_PRODUCTS: Product[] = [
         price: '280.00',
         skins: 98,
         agents: 22,
-        description: 'High mmr Immortal account.'
+        description: 'High mmr Immortal account.',
+        category: 'contas-smurf'
     },
     {
         id: '3',
@@ -28,7 +30,8 @@ const MOCK_PRODUCTS: Product[] = [
         price: '120.00',
         skins: 45,
         agents: 20,
-        description: 'Clean account ready for ranked.'
+        description: 'Clean account ready for ranked.',
+        category: 'contas-smurf'
     },
     {
         id: '4',
@@ -37,7 +40,8 @@ const MOCK_PRODUCTS: Product[] = [
         price: '65.00',
         skins: 20,
         agents: 18,
-        description: 'Perfect smurf account.'
+        description: 'Perfect smurf account.',
+        category: 'contas-smurf'
     },
     {
         id: '5',
@@ -46,7 +50,8 @@ const MOCK_PRODUCTS: Product[] = [
         price: '45.00',
         skins: 10,
         agents: 15,
-        description: 'Budget friendly styled main.'
+        description: 'Budget friendly styled main.',
+        category: 'skins-aleatorias'
     },
     {
         id: '6',
@@ -55,7 +60,8 @@ const MOCK_PRODUCTS: Product[] = [
         price: '25.00',
         skins: 5,
         agents: 10,
-        description: 'Starter account.'
+        description: 'Starter account.',
+        category: 'skins-aleatorias'
     }
 ];
 
@@ -64,7 +70,7 @@ const Home: React.FC = () => {
 
     const filteredProducts = filter === 'ALL'
         ? MOCK_PRODUCTS
-        : MOCK_PRODUCTS.filter(p => p.rank.includes(filter));
+        : MOCK_PRODUCTS.filter(p => p.category === filter);
 
     return (
         <main className="relative min-h-screen z-10">
@@ -116,16 +122,21 @@ const Home: React.FC = () => {
             <div className="max-w-7xl mx-auto px-6 md:px-12 pb-20">
                 {/* Filter */}
                 <div className="flex justify-center gap-4 mb-12 flex-wrap">
-                    {['ALL', 'RADIANT', 'IMMORTAL', 'ASCENDANT', 'DIAMOND'].map((item) => (
+                    {[
+                        { id: 'ALL', label: 'TODOS' },
+                        { id: 'skins-aleatorias', label: 'SKINS ALEATÓRIAS' },
+                        { id: 'skin-garantida', label: 'SKIN GARANTIDA' },
+                        { id: 'contas-smurf', label: 'CONTAS SMURF' }
+                    ].map((item) => (
                         <button
-                            key={item}
-                            onClick={() => setFilter(item)}
-                            className={`text-sm tracking-widest font-bold py-2 px-6 rounded-full border transition-all ${filter === item
+                            key={item.id}
+                            onClick={() => setFilter(item.id)}
+                            className={`text-sm tracking-widest font-bold py-2 px-6 rounded-full border transition-all ${filter === item.id
                                 ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.5)]'
                                 : 'bg-transparent text-gray-500 border-gray-700 hover:border-white hover:text-white'
                                 }`}
                         >
-                            {item}
+                            {item.label}
                         </button>
                     ))}
                 </div>

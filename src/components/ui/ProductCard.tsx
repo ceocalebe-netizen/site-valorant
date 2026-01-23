@@ -12,6 +12,7 @@ export interface Product {
     skins: number;
     agents: number;
     description: string;
+    category: 'skins-aleatorias' | 'skin-garantida' | 'contas-smurf';
 }
 
 interface ProductCardProps {
