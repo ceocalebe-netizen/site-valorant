@@ -12,7 +12,7 @@ const Header: React.FC = () => {
                     <span className="text-white font-bold text-xl -rotate-45 group-hover:rotate-0 transition-transform">V</span>
                 </div>
                 <h1 className="text-2xl font-display font-bold tracking-widest text-white group-hover:text-valorant-red transition-colors">
-                    VALO<span className="text-neon-cyan">STORE</span>
+                    VAL <span className="text-neon-cyan">ACCOUNTS</span>
                 </h1>
             </div>
 
