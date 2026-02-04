@@ -11,7 +11,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '5.00',
         description: 'Random account with 1-10 skins guaranteed. Full access.',
         category: 'random-skins',
-        checkoutUrl: 'https://buy.stripe.com/6oU6oGfqB8wncF43UFg7e01'
+        checkoutUrl: 'https://buy.stripe.com/00w3cu4LXbIzcF43UFg7e0m'
     },
     {
         id: '2',
@@ -20,7 +20,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '12.00',
         description: 'Random account with 10-20 skins guaranteed. Full access.',
         category: 'random-skins',
-        checkoutUrl: 'https://buy.stripe.com/9B6eVcditaEv5cC8aVg7e02'
+        checkoutUrl: 'https://buy.stripe.com/bJe7sK4LXeULawWgHrg7e0n'
     },
     {
         id: '3',
@@ -29,7 +29,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '25.00',
         description: 'Random account with 20-40 skins guaranteed. Full access.',
         category: 'random-skins',
-        checkoutUrl: 'https://buy.stripe.com/cNieVcfqB8wneNcbn7g7e03'
+        checkoutUrl: 'https://buy.stripe.com/6oU8wO1zLbIzgVkaj3g7e0o'
     },
     {
         id: '4',
@@ -38,7 +38,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '40.00',
         description: 'Random account with 40-60 skins guaranteed. Full access.',
         category: 'random-skins',
-        checkoutUrl: 'https://buy.stripe.com/8x2eVc1zL7sjcF4gHrg7e04'
+        checkoutUrl: 'https://buy.stripe.com/eVq7sKemxfYP20qbn7g7e0p'
     },
     {
         id: '5',
@@ -47,7 +47,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '20.00',
         description: 'Guaranteed Reaver Karambit skin. Full access.',
         category: 'guaranteed-skin',
-        checkoutUrl: 'https://buy.stripe.com/bJe6oGbal5kbbB0dvfg7e05'
+        checkoutUrl: 'https://buy.stripe.com/5kQeVca6h7sjbB076Rg7e0q'
     },
     {
         id: '6',
@@ -56,7 +56,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '20.00',
         description: 'Guaranteed Black.Market skin. Full access.',
         category: 'guaranteed-skin',
-        checkoutUrl: 'https://buy.stripe.com/4gM8wOcepeUL20q1Mxg7e06'
+        checkoutUrl: 'https://buy.stripe.com/4gMfZg6U5bIz6gG2QBg7e0r'
     },
     {
         id: '7',
@@ -65,7 +65,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '20.00',
         description: 'Guaranteed Kuronami no Yaiba skin. Full access.',
         category: 'guaranteed-skin',
-        checkoutUrl: 'https://buy.stripe.com/8x26oG3HTdQHeNc76Rg7e07'
+        checkoutUrl: 'https://buy.stripe.com/eVq14m2DP13V34u1Mxg7e0s'
     },
     {
         id: '8',
@@ -74,7 +74,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '20.00',
         description: 'Guaranteed Xenohunter Knife skin. Full access.',
         category: 'guaranteed-skin',
-        checkoutUrl: 'https://buy.stripe.com/5kQcN41zLaEv8oO62Ng7e08'
+        checkoutUrl: 'https://buy.stripe.com/eVqcN4guF9ArdJ88aVg7e0t'
     },
     {
         id: '9',
@@ -83,7 +83,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '20.00',
         description: 'Guaranteed Prime//2.0 Karambit skin. Full access.',
         category: 'guaranteed-skin',
-        checkoutUrl: 'https://buy.stripe.com/28E8wO3HT3c334ucrbg7e09'
+        checkoutUrl: 'https://buy.stripe.com/6oU7sKemxcMDcF42QBg7e0u'
     },
     {
         id: '10',
@@ -92,7 +92,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '8.50',
         description: 'Guaranteed Reaver Vandal skin. Full access.',
         category: 'guaranteed-skin',
-        checkoutUrl: 'https://buy.stripe.com/3cI14m3HT5kb20qaj3g7e0a'
+        checkoutUrl: 'https://buy.stripe.com/fZuaEW4LX7sj6gGdvfg7e0v'
     },
     {
         id: '11',
@@ -101,7 +101,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '8.50',
         description: 'Guaranteed Prime Vandal skin. Full access.',
         category: 'guaranteed-skin',
-        checkoutUrl: 'https://buy.stripe.com/4gM28q5Q1fYPbB062Ng7e0b'
+        checkoutUrl: 'https://buy.stripe.com/14A6oG7Y97sj34u62Ng7e0w'
     },
     {
         id: '12',
@@ -110,7 +110,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '10.00',
         description: 'Guaranteed XERØFANG Vandal skin. Full access.',
         category: 'guaranteed-skin',
-        checkoutUrl: 'https://buy.stripe.com/7sY3cufqBeUL48ybn7g7e0c'
+        checkoutUrl: 'https://buy.stripe.com/5kQ8wO0vH6of8oO62Ng7e0x'
     },
     {
         id: '13',
@@ -119,7 +119,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '8.50',
         description: 'Guaranteed Kuronami Vandal skin. Full access.',
         category: 'guaranteed-skin',
-        checkoutUrl: 'https://buy.stripe.com/5kQ28qdit9AreNcbn7g7e0d'
+        checkoutUrl: 'https://buy.stripe.com/4gMcN46U54g76gGcrbg7e0y'
     },
     {
         id: '14',
@@ -128,7 +128,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '8.50',
         description: 'Guaranteed Prelude to Chaos Vandal skin. Full access.',
         category: 'guaranteed-skin',
-        checkoutUrl: 'https://buy.stripe.com/8x27sKemxbIz0Wm62Ng7e0e'
+        checkoutUrl: 'https://buy.stripe.com/28EaEW6U58wn0WmgHrg7e0z'
     },
     {
         id: '15',
@@ -137,7 +137,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '3.00',
         description: 'Unranked account ready for ranked. Full access.',
         category: 'smurf-accounts',
-        checkoutUrl: 'https://buy.stripe.com/3cI6oGbalbIzdJ8aj3g7e0f'
+        checkoutUrl: 'https://buy.stripe.com/14A4gy3HTfYP0Wm4YJg7e0A'
     },
     {
         id: '16',
@@ -146,7 +146,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '5.00',
         description: 'Bronze rank guaranteed. Full access.',
         category: 'smurf-accounts',
-        checkoutUrl: 'https://buy.stripe.com/9B600iguFfYP7kK62Ng7e0g'
+        checkoutUrl: 'https://buy.stripe.com/3cI7sK1zL4g7cF462Ng7e0B'
     },
     {
         id: '17',
@@ -155,7 +155,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '6.00',
         description: 'Silver rank guaranteed. Full access.',
         category: 'smurf-accounts',
-        checkoutUrl: 'https://buy.stripe.com/4gMcN40vH4g7eNc0Itg7e0h'
+        checkoutUrl: 'https://buy.stripe.com/aFaeVc6U53c37kKaj3g7e0C'
     },
     {
         id: '18',
@@ -164,7 +164,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '7.00',
         description: 'Gold rank guaranteed. Full access.',
         category: 'smurf-accounts',
-        checkoutUrl: 'https://buy.stripe.com/3cI8wOfqBeULawWaj3g7e0i'
+        checkoutUrl: 'https://buy.stripe.com/8x27sKbal13VeNc62Ng7e0D'
     },
     {
         id: '19',
@@ -173,7 +173,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '9.00',
         description: 'Platinum rank guaranteed. Full access.',
         category: 'smurf-accounts',
-        checkoutUrl: 'https://buy.stripe.com/aFaaEWemx13VdJ8aj3g7e0j'
+        checkoutUrl: 'https://buy.stripe.com/eVq00i1zLbIzbB02QBg7e0E'
     },
     {
         id: '20',
@@ -182,7 +182,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '10.00',
         description: 'Diamond rank guaranteed. Full access.',
         category: 'smurf-accounts',
-        checkoutUrl: 'https://buy.stripe.com/cNi5kCfqB6ofbB08aVg7e0k'
+        checkoutUrl: 'https://buy.stripe.com/6oU3cufqBbIzcF4crbg7e0F'
     },
     {
         id: '21',
@@ -191,7 +191,7 @@ const MOCK_PRODUCTS: Product[] = [
         price: '30.00',
         description: 'Ascendant rank guaranteed. Full access.',
         category: 'smurf-accounts',
-        checkoutUrl: 'https://buy.stripe.com/3cI14m7Y93c38oO4YJg7e0l'
+        checkoutUrl: 'https://buy.stripe.com/dRmcN4fqB3c30Wmbn7g7e0G'
     }
 ];
 
