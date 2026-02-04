@@ -15,6 +15,7 @@ export interface Product {
     agents?: number;
     description: string;
     category: 'random-skins' | 'guaranteed-skin' | 'smurf-accounts';
+    checkoutUrl?: string;
 }
 
 interface ProductCardProps {
@@ -73,9 +74,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
                 <div className="mt-auto w-full flex items-center justify-between">
                     <span className="text-xl font-bold text-white">${product.price}</span>
-                    <GlowButton variant="secondary" className="px-4 py-1 text-sm">
-                        View Details
-                    </GlowButton>
+                    <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer" className="block">
+                        <GlowButton variant="secondary" className="px-4 py-1 text-sm w-full">
+                            Buy Now
+                        </GlowButton>
+                    </a>
                 </div>
             </div>
         </motion.div>

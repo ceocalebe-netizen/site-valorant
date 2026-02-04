@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ProductCard, { type Product } from '../components/ui/ProductCard';
 import { motion } from 'framer-motion';
+import SafetySection from '../components/home/SafetySection';
 
 const MOCK_PRODUCTS: Product[] = [
     {
@@ -9,7 +10,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/eEof4QV.png',
         price: '5.00',
         description: 'Random account with 1-10 skins guaranteed. Full access.',
-        category: 'random-skins'
+        category: 'random-skins',
+        checkoutUrl: 'https://buy.stripe.com/6oU6oGfqB8wncF43UFg7e01'
     },
     {
         id: '2',
@@ -17,7 +19,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/KKdXIPW.png',
         price: '12.00',
         description: 'Random account with 10-20 skins guaranteed. Full access.',
-        category: 'random-skins'
+        category: 'random-skins',
+        checkoutUrl: 'https://buy.stripe.com/9B6eVcditaEv5cC8aVg7e02'
     },
     {
         id: '3',
@@ -25,7 +28,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/DTnTwep.png',
         price: '25.00',
         description: 'Random account with 20-40 skins guaranteed. Full access.',
-        category: 'random-skins'
+        category: 'random-skins',
+        checkoutUrl: 'https://buy.stripe.com/cNieVcfqB8wneNcbn7g7e03'
     },
     {
         id: '4',
@@ -33,7 +37,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/617LI2v.png',
         price: '40.00',
         description: 'Random account with 40-60 skins guaranteed. Full access.',
-        category: 'random-skins'
+        category: 'random-skins',
+        checkoutUrl: 'https://buy.stripe.com/8x2eVc1zL7sjcF4gHrg7e04'
     },
     {
         id: '5',
@@ -41,7 +46,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/lPzF6a0.png',
         price: '20.00',
         description: 'Guaranteed Reaver Karambit skin. Full access.',
-        category: 'guaranteed-skin'
+        category: 'guaranteed-skin',
+        checkoutUrl: 'https://buy.stripe.com/bJe6oGbal5kbbB0dvfg7e05'
     },
     {
         id: '6',
@@ -49,7 +55,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/ZuJ2TR3.png',
         price: '20.00',
         description: 'Guaranteed Black.Market skin. Full access.',
-        category: 'guaranteed-skin'
+        category: 'guaranteed-skin',
+        checkoutUrl: 'https://buy.stripe.com/4gM8wOcepeUL20q1Mxg7e06'
     },
     {
         id: '7',
@@ -57,7 +64,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: '/kuronami-no-yaiba.png',
         price: '20.00',
         description: 'Guaranteed Kuronami no Yaiba skin. Full access.',
-        category: 'guaranteed-skin'
+        category: 'guaranteed-skin',
+        checkoutUrl: 'https://buy.stripe.com/8x26oG3HTdQHeNc76Rg7e07'
     },
     {
         id: '8',
@@ -65,7 +73,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/IqOMPO9.png',
         price: '20.00',
         description: 'Guaranteed Xenohunter Knife skin. Full access.',
-        category: 'guaranteed-skin'
+        category: 'guaranteed-skin',
+        checkoutUrl: 'https://buy.stripe.com/5kQcN41zLaEv8oO62Ng7e08'
     },
     {
         id: '9',
@@ -73,7 +82,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/kgg4bAq.png',
         price: '20.00',
         description: 'Guaranteed Prime//2.0 Karambit skin. Full access.',
-        category: 'guaranteed-skin'
+        category: 'guaranteed-skin',
+        checkoutUrl: 'https://buy.stripe.com/28E8wO3HT3c334ucrbg7e09'
     },
     {
         id: '10',
@@ -81,7 +91,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/x9aThpe.png',
         price: '8.50',
         description: 'Guaranteed Reaver Vandal skin. Full access.',
-        category: 'guaranteed-skin'
+        category: 'guaranteed-skin',
+        checkoutUrl: 'https://buy.stripe.com/3cI14m3HT5kb20qaj3g7e0a'
     },
     {
         id: '11',
@@ -89,7 +100,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/4CGizZF.png',
         price: '8.50',
         description: 'Guaranteed Prime Vandal skin. Full access.',
-        category: 'guaranteed-skin'
+        category: 'guaranteed-skin',
+        checkoutUrl: 'https://buy.stripe.com/4gM28q5Q1fYPbB062Ng7e0b'
     },
     {
         id: '12',
@@ -97,7 +109,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/jCnfvMk.png',
         price: '10.00',
         description: 'Guaranteed XERØFANG Vandal skin. Full access.',
-        category: 'guaranteed-skin'
+        category: 'guaranteed-skin',
+        checkoutUrl: 'https://buy.stripe.com/7sY3cufqBeUL48ybn7g7e0c'
     },
     {
         id: '13',
@@ -105,7 +118,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/AZc4ezj.png',
         price: '8.50',
         description: 'Guaranteed Kuronami Vandal skin. Full access.',
-        category: 'guaranteed-skin'
+        category: 'guaranteed-skin',
+        checkoutUrl: 'https://buy.stripe.com/5kQ28qdit9AreNcbn7g7e0d'
     },
     {
         id: '14',
@@ -113,7 +127,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/s6BX1Hv.png',
         price: '8.50',
         description: 'Guaranteed Prelude to Chaos Vandal skin. Full access.',
-        category: 'guaranteed-skin'
+        category: 'guaranteed-skin',
+        checkoutUrl: 'https://buy.stripe.com/8x27sKemxbIz0Wm62Ng7e0e'
     },
     {
         id: '15',
@@ -121,7 +136,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/meKj209.png',
         price: '3.00',
         description: 'Unranked account ready for ranked. Full access.',
-        category: 'smurf-accounts'
+        category: 'smurf-accounts',
+        checkoutUrl: 'https://buy.stripe.com/3cI6oGbalbIzdJ8aj3g7e0f'
     },
     {
         id: '16',
@@ -129,7 +145,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/VTuF2wW.png',
         price: '5.00',
         description: 'Bronze rank guaranteed. Full access.',
-        category: 'smurf-accounts'
+        category: 'smurf-accounts',
+        checkoutUrl: 'https://buy.stripe.com/9B600iguFfYP7kK62Ng7e0g'
     },
     {
         id: '17',
@@ -137,7 +154,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/6lTTQYd.png',
         price: '6.00',
         description: 'Silver rank guaranteed. Full access.',
-        category: 'smurf-accounts'
+        category: 'smurf-accounts',
+        checkoutUrl: 'https://buy.stripe.com/4gMcN40vH4g7eNc0Itg7e0h'
     },
     {
         id: '18',
@@ -145,7 +163,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/LgwptuK.png',
         price: '7.00',
         description: 'Gold rank guaranteed. Full access.',
-        category: 'smurf-accounts'
+        category: 'smurf-accounts',
+        checkoutUrl: 'https://buy.stripe.com/3cI8wOfqBeULawWaj3g7e0i'
     },
     {
         id: '19',
@@ -153,7 +172,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/W184Agl.png',
         price: '9.00',
         description: 'Platinum rank guaranteed. Full access.',
-        category: 'smurf-accounts'
+        category: 'smurf-accounts',
+        checkoutUrl: 'https://buy.stripe.com/aFaaEWemx13VdJ8aj3g7e0j'
     },
     {
         id: '20',
@@ -161,7 +181,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/kSchTWA.png',
         price: '10.00',
         description: 'Diamond rank guaranteed. Full access.',
-        category: 'smurf-accounts'
+        category: 'smurf-accounts',
+        checkoutUrl: 'https://buy.stripe.com/cNi5kCfqB6ofbB08aVg7e0k'
     },
     {
         id: '21',
@@ -169,7 +190,8 @@ const MOCK_PRODUCTS: Product[] = [
         image: 'https://i.imgur.com/Of12LSc.png',
         price: '30.00',
         description: 'Ascendant rank guaranteed. Full access.',
-        category: 'smurf-accounts'
+        category: 'smurf-accounts',
+        checkoutUrl: 'https://buy.stripe.com/3cI14m7Y93c38oO4YJg7e0l'
     }
 ];
 
@@ -179,6 +201,11 @@ const Home: React.FC = () => {
     const filteredProducts = filter === 'ALL'
         ? MOCK_PRODUCTS
         : MOCK_PRODUCTS.filter(p => p.category === filter);
+
+    // Group products by category for the 'ALL' view
+    const randomSkins = MOCK_PRODUCTS.filter(p => p.category === 'random-skins');
+    const guaranteedSkins = MOCK_PRODUCTS.filter(p => p.category === 'guaranteed-skin');
+    const smurfAccounts = MOCK_PRODUCTS.filter(p => p.category === 'smurf-accounts');
 
     return (
         <main className="relative min-h-screen z-10">
@@ -229,7 +256,7 @@ const Home: React.FC = () => {
 
             <div className="max-w-7xl mx-auto px-6 md:px-12 pb-20">
                 {/* Filter */}
-                <div className="flex justify-center gap-4 mb-12 flex-wrap">
+                <div className="flex justify-center gap-4 mb-16 flex-wrap">
                     {[
                         { id: 'ALL', label: 'ALL' },
                         { id: 'random-skins', label: 'RANDOM SKINS' },
@@ -249,12 +276,66 @@ const Home: React.FC = () => {
                     ))}
                 </div>
 
-                {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {filteredProducts.map((product) => (
-                        <ProductCard key={product.id} product={product} />
-                    ))}
-                </div>
+                {/* Content Rendering */}
+                {filter === 'ALL' ? (
+                    <div className="space-y-20">
+                        {/* Section 1: Random Skins */}
+                        <div>
+                            <h3 className="text-2xl font-bold text-white mb-8 pl-4 border-l-4 border-neon-cyan">
+                                RANDOM SKINS
+                            </h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {randomSkins.map((product) => (
+                                    <ProductCard key={product.id} product={product} />
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Safety Section Interleaved */}
+                    </div>
+                ) : (
+                    /* Filtered View */
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {filteredProducts.map((product) => (
+                            <ProductCard key={product.id} product={product} />
+                        ))}
+                    </div>
+                )}
+
+                {/* Interleaved Sections for ALL view - Split for structure clarity in code */}
+                {filter === 'ALL' && (
+                    <>
+                        <div className="-mx-6 md:-mx-12">
+                            <SafetySection />
+                        </div>
+
+                        <div className="space-y-20">
+                            {/* Section 2: Guaranteed Skins */}
+                            <div>
+                                <h3 className="text-2xl font-bold text-white mb-8 pl-4 border-l-4 border-neon-purple">
+                                    GUARANTEED SKINS
+                                </h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                    {guaranteedSkins.map((product) => (
+                                        <ProductCard key={product.id} product={product} />
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Section 3: Smurf Accounts */}
+                            <div>
+                                <h3 className="text-2xl font-bold text-white mb-8 pl-4 border-l-4 border-valorant-red">
+                                    SMURF ACCOUNTS
+                                </h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                    {smurfAccounts.map((product) => (
+                                        <ProductCard key={product.id} product={product} />
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </>
+                )}
             </div>
 
         </main>
